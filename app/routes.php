@@ -11,14 +11,13 @@ Router::post('goods.buy', '/goods/buy', 'MerchantController@buyed');
 Router::post('goods.recount', '/goods/recount/{goods}', 'MerchantController@goodsRecount');
 Router::post('goods.server', '/goods/server/{server}', 'MerchantController@gGoodsFServer');
 
-// Admin routes
-Router::get('admin.index', '/admin', 'Admin\DashboardController@index');
-
 // Login Routes
 Router::get('admin.login', '/admin/login', 'Admin\LoginController@formView');
 Router::get('admin.logout', '/admin/logout', 'Admin\LoginController@logout');
 Router::post('admin.auth', '/admin/auth', 'Admin\LoginController@auth');
 
+// Admin routes
+Router::get('admin.index', '/admin', 'Admin\DashboardController@index');
 Router::get('admin.goods', '/admin/goods', 'Admin\GoodsController@index');
 Router::get('admin.goods.edit', '/admin/goods/{id}', 'Admin\GoodsController@edit');
 Router::get('admin.desc.edit', '/admin/goods/desc/{id}', 'Admin\GoodsController@desc');

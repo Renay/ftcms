@@ -1,0 +1,9 @@
+<?php
+
+return [
+    'db_host'     => 'your_host', # адрес для соединения с бд MySQL
+    'db_name'     => 'your_name', # имя базы данных MySQL
+    'db_user'     => 'your_user', # имя пользователя MySQL
+    'db_pass'     => 'your_pass', # пароль пользователя MySQL
+    'db_port'     => 'your_port' # порт для соединения с базой данных MySQL
+];
