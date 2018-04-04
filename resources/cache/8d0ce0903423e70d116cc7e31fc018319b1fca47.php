@@ -1,1 +1,0 @@
-<p id="#empty" style="font-size: 158px;">Empty...</p>

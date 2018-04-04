@@ -1,6 +1,6 @@
 {
     "name": "FutureCMS",
-    "description": "The Cms on base Framework.",
+    "description": "It is script for manage Minecraft servers from web ",
     "license": "MIT",
     "type": "project",
     "require": {
@@ -14,10 +14,10 @@
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "app",
-            "Engine\\": "engine",
-            "Merchant\\": "merchant",
-            "Engine\\DI\\": "engine/DI"
+            "Engine\\DI\\": "engine/DI",
+			"Merchant\\": "merchant",
+         	"Engine\\": "engine",
+            "App\\": "app"
         },
         "files": [
             "engine/Helper.php"

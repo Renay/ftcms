@@ -5,7 +5,48 @@
     RewriteRule ^(.*)$ /$1?%1 [R=301,L]
     RewriteRule ^(.*)/$ /$1 [R=301,L]
 
-    RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ /index.php [L]
 </IfModule>
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+    AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+    AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf x-font/eot x-font/ashx
+    AddOutputFilterByType DEFLATE font/truetype font/opentype
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifModule>
+
+<ifModule mod_expires.c>
+	# TN - START EXPIRES CACHING #
+	ExpiresActive On
+	ExpiresByType text/css "access 4 hours"
+	ExpiresByType text/html "access 4 hours"
+	ExpiresByType image/gif "access 1 month"
+	ExpiresByType image/png "access 1 month"
+	ExpiresByType image/jpg "access 1 month"
+	ExpiresByType image/jpeg "access 1 month"
+	ExpiresByType image/x-icon "access 1 month"
+	ExpiresByType application/pdf "access 4 hours"
+	ExpiresByType application/javascript "access 4 hours"
+	ExpiresByType text/x-javascript "access 4 hours"
+	ExpiresByType application/x-shockwave-flash "access 4 hours"
+	ExpiresDefault "access 4 hours"
+	# TN - END EXPIRES CACHING #
+</ifModule>
+
+<ifModule mod_headers.c>
+    <filesMatch "\.(ico|jpe?g|png|gif|swf|svg|webp)$">
+      Header set Cache-Control "max-age=25920000"
+    </filesMatch>
+    <filesMatch "\.(css)$">
+      Header set Cache-Control "max-age=25920000"
+    </filesMatch>
+    <filesMatch "\.(js)$">
+      Header set Cache-Control "max-age=25920000"
+    </filesMatch>
+</ifModule>
