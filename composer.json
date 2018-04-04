@@ -1,0 +1,26 @@
+{
+    "name": "FutureCMS",
+    "description": "The Cms on base Framework.",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "philo/laravel-blade": "3.*"
+    },
+    "authors": [
+        {
+            "name": "NULL",
+            "email": "xqween01@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app",
+            "Engine\\": "engine",
+            "Merchant\\": "merchant",
+            "Engine\\DI\\": "engine/DI"
+        },
+        "files": [
+            "engine/Helper.php"
+        ]
+    }
+}
