@@ -10,6 +10,6 @@ Future CMS - it the script for manage Minecraft servers from web
 ---
 
 ## Install guide
-Installation is quite simple. Put everything in the site folder, give permissions 777 to the install folder and go to yourdomain.com and follow instructions. Profit!
+Installation is quite simple. Put everything in the site folder, give permissions 777 to the install and resources/cache folder and go to yourdomain.com and follow instructions. Profit!
 
 > You can contact with me through [telegram](http://t.me/renaay)
