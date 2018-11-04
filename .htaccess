@@ -1,8 +1,9 @@
 Options +FollowSymLinks -Indexes
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI} !^/resources\/assets/(app|admin)\/.*$
-    RewriteRule . index.php [L]
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule . index.php [L]
 </IfModule>
 
 <ifModule mod_deflate.c>
