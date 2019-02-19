@@ -3,9 +3,9 @@ Future CMS - it the script for manage Minecraft servers from web
 
 ## System Requirements
 * Apache 2.4 + Mod Rewrite
-* MySQL 5.6+
-* PHP 7.1+
-* Composer 1.8.x
+* MySQL >=5.6
+* PHP >=7.1
+* [Composer 1.8.x](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 
 
 ---
