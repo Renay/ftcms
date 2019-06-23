@@ -1,3 +1,5 @@
+### Project is DEPRECATED
+
 # FutureCMS
 Future CMS - it the script for manage Minecraft servers from web
 
